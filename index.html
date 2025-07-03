@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOURISM WEBSITE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function display(sectionId) {
+        const sections = [
+          "sectionHome",
+          "sectionFavouritePlaces",
+          "sectionTajMahalDetailedView",
+          "sectionGoldenTempleDetailedView",
+          "sectionMysoreDetailedView",
+          "sectionVaranasiDetailedView",
+        ];
+        sections.forEach((id) => {
+          document.getElementById(id).style.display = "none";
+        });
+        document.getElementById(sectionId).style.display = "block";
+      }
+
+      window.onload = function () {
+        display("sectionHome");
+      };
+    </script>
+  </head>
+  <body>
+    <!-- HOME SECTION -->
+    <div id="sectionHome">
+      <div class="bg-container">
+        <div class="tourism-card">
+          <h1 class="main-heading">Tourism</h1>
+          <p class="paragraph">Plan your trip.</p>
+          <button class="btn-dark" onclick="display('sectionFavouritePlaces')">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAVOURITE PLACES -->
+    <div id="sectionFavouritePlaces">
+      <div class="favourite-places-bg-container">
+        <h1 class="favourite-places-heading">Favourite Places</h1>
+
+        <div
+          class="favourite-place-card-container"
+          onclick="display('sectionTajMahalDetailedView')"
+        >
+          <div>
+            <h1 class="favourite-place-card-heading">Taj Mahal</h1>
+            <p class="favourite-place-card-description">
+              Symbol of India's heritage.
+            </p>
+          </div>
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tajmahal-img.png"
+            class="favourite-place-card-image"
+          />
+        </div>
+
+        <div
+          class="favourite-place-card-container"
+          onclick="display('sectionGoldenTempleDetailedView')"
+        >
+          <div>
+            <h1 class="favourite-place-card-heading">Golden Temple</h1>
+            <p class="favourite-place-card-description">
+              Amritsar is world-famous for the Golden Temple.
+            </p>
+          </div>
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/golden-temple-img.png"
+            class="favourite-place-card-image"
+          />
+        </div>
+
+        <div
+          class="favourite-place-card-container"
+          onclick="display('sectionMysoreDetailedView')"
+        >
+          <div>
+            <h1 class="favourite-place-card-heading">Mysore Palace</h1>
+            <p class="favourite-place-card-description">
+              Royal residence of Mysore kings.
+            </p>
+          </div>
+          <img
+            src="https://downloadscdn6.freepik.com/53876/32/31311.jpg?filename=hawa-mahal-palace-jaipur-india.jpg&token=exp=1751538147~hmac=1abb6eacaf3238ad532c68fd7863b944&filename=31311.jpg"
+            class="favourite-place-card-image"
+          />
+        </div>
+
+        <div
+          class="favourite-place-card-container"
+          onclick="display('sectionVaranasiDetailedView')"
+        >
+          <div>
+            <h1 class="favourite-place-card-heading">Varanasi Temple</h1>
+            <p class="favourite-place-card-description">
+              Dedicated to Lord Shiva in Varanasi.
+            </p>
+          </div>
+          <img
+            src="https://media.istockphoto.com/id/524723843/photo/varanasi-india.jpg?s=2048x2048&w=is&k=20&c=2K3FytUMhlIGummryJvjpR5DmuUjVmV5T--Lt6wf7Jo="
+            class="favourite-place-card-image"
+          />
+        </div>
+
+        <button class="btn-dark" onclick="display('sectionHome')">Back</button>
+      </div>
+    </div>
+
+    <!-- DETAILED VIEW: TAJ MAHAL -->
+    <div id="sectionTajMahalDetailedView">
+      <div class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Taj Mahal</h1>
+        <div class="detailed-view-card-container">
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tajmahal-c1-img.png"
+            class="d-block w-100"
+          />
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tajmahal-c2-img.png"
+            class="d-block w-100"
+          />
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tajmahal-c3-img.png"
+            class="d-block w-100"
+          />
+          <div class="detailed-view-card-text-container">
+            <p class="detailed-view-card-description">
+              The Taj Mahal is the greatest architectural achievement in
+              Indo-Islamic architecture. It symbolizes love and beauty.
+            </p>
+          </div>
+        </div>
+        <button class="btn-dark" onclick="display('sectionFavouritePlaces')">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- DETAILED VIEW: GOLDEN TEMPLE -->
+    <div id="sectionGoldenTempleDetailedView">
+      <div class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Golden Temple</h1>
+        <div class="detailed-view-card-container">
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/goldentemple1-img.png"
+            class="d-block w-100"
+          />
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/goldentemple2-img.png"
+            class="d-block w-100"
+          />
+          <img
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/goldentemple3-img.png"
+            class="d-block w-100"
+          />
+          <div class="detailed-view-card-text-container">
+            <p class="detailed-view-card-description">
+              The Golden Temple, also known as Harmandir Sahib, is a spiritual
+              and cultural symbol of Sikhism.
+            </p>
+          </div>
+        </div>
+        <button class="btn-dark" onclick="display('sectionFavouritePlaces')">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- DETAILED VIEW: MYSORE -->
+    <div id="sectionMysoreDetailedView">
+      <div class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Mysore Palace</h1>
+        <div class="detailed-view-card-container">
+          <img
+            src="https://downloadscdn6.freepik.com/53876/32/31311.jpg?filename=hawa-mahal-palace-jaipur-india.jpg&token=exp=1751538147~hmac=1abb6eacaf3238ad532c68fd7863b944&filename=31311.jpg"
+            class="d-block w-100"
+          />
+
+          <div class="detailed-view-card-text-container">
+            <p class="detailed-view-card-description">
+              The Mysore Palace is a royal residence in Karnataka. It's known
+              for its Indo-Saracenic architecture and grandeur.
+            </p>
+          </div>
+        </div>
+        <button class="btn-dark" onclick="display('sectionFavouritePlaces')">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- DETAILED VIEW: VARANASI -->
+    <div id="sectionVaranasiDetailedView">
+      <div class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Varanasi Temple</h1>
+        <div class="detailed-view-card-container">
+          <img
+            src="https://media.istockphoto.com/id/524723843/photo/varanasi-india.jpg?s=2048x2048&w=is&k=20&c=2K3FytUMhlIGummryJvjpR5DmuUjVmV5T--Lt6wf7Jo="
+            class="d-block w-100"
+          />
+          <div class="detailed-view-card-text-container">
+            <p class="detailed-view-card-description">
+              Kashi Vishwanath Temple in Varanasi is one of the most famous
+              Hindu temples dedicated to Lord Shiva.
+            </p>
+          </div>
+        </div>
+        <button class="btn-dark" onclick="display('sectionFavouritePlaces')">
+          Back
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
